@@ -1,0 +1,9 @@
+{
+  "event_id": "evt-092105-019-0001",
+  "event_type": "CASE_RELEASED",
+  "aggregate_type": "teaching_case",
+  "aggregate_id": "integrative-medicine-case-001",
+  "occurred_at": "2026-09-20T12:00:00+08:00",
+  "version": 1,
+  "summary": "登记融合医学临床教学案的首条领域记录"
+}
