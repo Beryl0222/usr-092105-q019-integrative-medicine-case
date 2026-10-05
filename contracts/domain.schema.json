@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "融合医学临床教学案领域事件",
-  "description": "用于跨模块交换事实记录的公共信封。",
+  "description": "用于跨模块交换事实记录的公共信封。分层内容放在信封之外的扩展字段：teaching_case 承载脱敏病例与教学同意；clinical_observation 承载症状/检查事实、证候观察、问题表述、药物相互作用、候选机制（kind 字段区分）；student_plan 承载各版决策（revision 递增）与模拟结果；faculty_feedback 承载跨学科意见、临床回顾与能力反馈。",
   "type": "object",
   "required": [
     "event_id",
@@ -22,10 +22,12 @@
       "type": "string",
       "enum": [
         "CASE_RELEASED",
+        "CONSENT_UPDATED",
+        "ACCESS_EXPIRED",
         "OBSERVATION_ADDED",
         "PLAN_SUBMITTED",
-        "FEEDBACK_SIGNED",
-        "ACCESS_EXPIRED"
+        "SIMULATION_RECORDED",
+        "FEEDBACK_SIGNED"
       ],
       "description": "本领域事件类型"
     },
